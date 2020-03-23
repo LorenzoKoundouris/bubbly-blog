@@ -11,7 +11,10 @@ class Index extends React.Component<IProps> {
   render() {
     return (
       <>
-        <Title>My page</Title>
+        <Hero>
+          <Title>Bubbly Blog</Title>
+        </Hero>
+        <Panel></Panel>
       </>
     );
   }
@@ -19,7 +22,20 @@ class Index extends React.Component<IProps> {
 
 export default Index;
 
+const Hero = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+`;
+
 const Title = styled.h1`
-  color: ${({ theme }) => theme.primaryColour};
+  font-family: "Parisienne", cursive;
+  color: ${({ theme }) => theme.tertiaryColour};
   font-size: 50px;
+`;
+
+const Panel = styled.div`
+  height: 500px;
+  background: #dae3de;
 `;
