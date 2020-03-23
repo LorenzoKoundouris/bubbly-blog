@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Title from "../components/Title";
 
 interface IProps {}
 
@@ -12,7 +13,9 @@ class Index extends React.Component<IProps> {
     return (
       <>
         <Hero>
-          <Title>Bubbly Blog</Title>
+          <StyledTitle>
+            <Title size="large" />
+          </StyledTitle>
         </Hero>
         <Panel></Panel>
       </>
@@ -29,10 +32,12 @@ const Hero = styled.div`
   height: 150px;
 `;
 
-const Title = styled.h1`
-  font-family: "Parisienne", cursive;
-  color: ${({ theme }) => theme.tertiaryColour};
-  font-size: 50px;
+const StyledTitle = styled.div`
+  display: none;
+
+  @media screen and (min-width: 500px) {
+    display: block;
+  }
 `;
 
 const Panel = styled.div`
