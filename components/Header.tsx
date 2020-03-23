@@ -1,13 +1,13 @@
 // libs
 import styled from "styled-components";
-import Link from "next/link";
+import LinkItem from "./LinkItem";
 
 function Header() {
   return (
     <StyledHeader>
-      <LeftMenu>
-        <Link href="/">Home</Link>
-      </LeftMenu>
+      <LinkItem href="/">HOME</LinkItem>
+      <LinkItem href="/">ABOUT</LinkItem>
+      <LinkItem href="/">CONTACT</LinkItem>
     </StyledHeader>
   );
 }
@@ -17,12 +17,11 @@ const StyledHeader = styled.div`
   display: flex;
   height: 85px;
   background: ${(props) => props.theme.primaryColour};
-  justify-content: space-between;
-`;
+  justify-content: center;
 
-const LeftMenu = styled.div`
-  display: flex;
-  cursor: pointer;
+  & > * {
+    margin: 0 24px;
+  }
 `;
 
 export default Header;

@@ -39,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
     }
-    font-family: sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: ${theme.fontColour};
   }
 `;
