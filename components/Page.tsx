@@ -33,6 +33,8 @@ class Page extends React.Component {
 // global styles
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Parisienne&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
+
   body {
     padding: 0;
     margin: 0;
@@ -42,7 +44,6 @@ const GlobalStyle = createGlobalStyle`
     }
     font-family: sans-serif;
     color: ${theme.fontColour};
-    /* background-image: url("https://c1.wallpaperflare.com/path/896/809/244/paper-texture-winter-color-45e3c807a0837eae7cabd7c54447369b.jpg"); */
     background-image: url("static/img/background.jpg");
     background-repeat: repeat;
     height: 5000px;
