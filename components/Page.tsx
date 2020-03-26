@@ -43,6 +43,7 @@ const GlobalStyle = createGlobalStyle`
       margin: 0;
     }
     color: ${theme.fontColour};
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 `;
 

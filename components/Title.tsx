@@ -26,6 +26,7 @@ const StyledTitle = styled.h1`
   /* font-family: "Parisienne", cursive; */
   font-family: "Liu Jian Mao Cao", cursive;
   color: ${({ theme }) => theme.fontColour};
+  z-index: 2;
 
   &.small {
     font-size: 20px;
