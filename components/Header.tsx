@@ -30,9 +30,9 @@ const StyledHeader = styled.div`
   position: relative;
   height: 50px;
   /* TODO set rgba in theme as well as hex */
-  background: rgba(210, 199, 187, 0.5);
-  /* justify-content: flex-end; */
-  color: ${(props) => props.theme.tertiaryColour};
+  background: rgba(199, 190, 182, 0.5);
+  color: ${(props) =>
+    props.theme.tertiaryColour}; /*background: rgba(210, 199, 187, 0.5); */
   font-weight: bold;
 `;
 
