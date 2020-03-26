@@ -6,12 +6,12 @@ import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import Header from "./Header";
 
 const theme = {
-  primaryColour: "#d2c7bb",
-  secondaryColour: "#dae3de",
+  primaryColour: "#d5ccc6",
+  secondaryColour: "#d8aea1",
   tertiaryColour: "#2b8f8c",
   backgroundColour: "#fff",
   fontColour: "#000",
-  highlightColour: "#29563a",
+  highlightColour: "#29563a"
 };
 
 class Page extends React.Component {
@@ -42,18 +42,14 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
     }
-    font-family: sans-serif;
     color: ${theme.fontColour};
-    background-image: url("static/img/background.jpg");
-    background-repeat: repeat;
-    height: 5000px;
   }
 `;
 
 // styles
 const StyledPage = styled.div`
   position: relative;
-  /* background: ${(props) => props.theme.backgroundColour}; */
+  background: ${props => props.theme.backgroundColour};
 `;
 
 export default Page;

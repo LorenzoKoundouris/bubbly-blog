@@ -25,7 +25,7 @@ class Title extends Component<IProps> {
 const StyledTitle = styled.h1`
   /* font-family: "Parisienne", cursive; */
   font-family: "Liu Jian Mao Cao", cursive;
-  color: ${({ theme }) => theme.tertiaryColour};
+  color: ${({ theme }) => theme.fontColour};
 
   &.small {
     font-size: 20px;

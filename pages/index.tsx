@@ -14,12 +14,10 @@ class Index extends React.Component<IProps> {
       <>
         <Hero>
           <StyledTitle>
-            <Title size="large" />
+            <Title size="medium" />
+            <Image src="static/img/brush-stroke.png" />
           </StyledTitle>
         </Hero>
-        <Panel>
-          <StyledImage src="/static/img/leaf.png" />
-        </Panel>
       </>
     );
   }
@@ -31,27 +29,21 @@ const Hero = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
-
-  @media screen and (min-width: 500px) {
-    height: 150px;
-  }
 `;
 
 const StyledTitle = styled.div`
-  display: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
 
-  @media screen and (min-width: 500px) {
-    display: block;
+  & > * {
+    position: absolute;
   }
 `;
 
-const StyledImage = styled.img`
-  height: 100%;
-  object-fit: cover;
-`;
-
-const Panel = styled.div`
-  height: 30vh;
-  background: #dae3de;
+const Image = styled.img`
+  max-width: 200px;
+  z-index: -1;
 `;
