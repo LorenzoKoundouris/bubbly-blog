@@ -33,6 +33,27 @@ class Index extends React.Component<IProps> {
 
         <LatestPosts>
           <h3>Latest Posts</h3>
+
+          <ArticleGrid>
+            <Article>
+              <img src="static/img/tower-bridge.jpg" />
+              <TextContainer>
+                <p>CINEMA IS A MATTER OF WHAT'S IN THE FRAME AND WHAT'S OUT</p>
+              </TextContainer>
+            </Article>
+            <Article>
+              <img src="static/img/tower-bridge.jpg" />
+              <TextContainer>
+                <p>CINEMA IS A MATTER OF WHAT'S IN THE FRAME AND WHAT'S OUT</p>
+              </TextContainer>
+            </Article>
+            <Article>
+              <img src="static/img/tower-bridge.jpg" />
+              <TextContainer>
+                <p>CINEMA IS A MATTER OF WHAT'S IN THE FRAME AND WHAT'S OUT</p>
+              </TextContainer>
+            </Article>
+          </ArticleGrid>
         </LatestPosts>
       </Layout>
     );
@@ -42,9 +63,8 @@ class Index extends React.Component<IProps> {
 export default Index;
 
 const Layout = styled.div`
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-row-gap: 20px;
+  display: flex;
+  flex-direction: column;
 `;
 
 const StyledTitle = styled.header`
@@ -54,6 +74,7 @@ const StyledTitle = styled.header`
   width: 100%;
   min-height: 70px;
   position: relative;
+  background-color: ${props => props.theme.backgroundColour};
 
   & > * {
     position: absolute;
@@ -71,6 +92,8 @@ const Hero = styled.section`
   justify-content: center;
   align-items: center;
   height: 180px;
+  margin-top: 20px;
+  background-color: ${props => props.theme.backgroundColour};
 
   @media screen and (min-width: 414px) {
     height: 200px;
@@ -116,5 +139,47 @@ const ButtonContainer = styled.div`
 `;
 
 const LatestPosts = styled.section`
-  margin: 8px;
+  margin: 20px 0 8px 8px;
+  background-color: ${props => props.theme.backgroundColour};
+`;
+
+const ArticleGrid = styled.div`
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  grid-auto-columns: 180px;
+  grid-template-rows: 200px;
+  overflow-x: scroll;
+  width: 100%;
+  margin-top: 20px;
+`;
+
+const Article = styled.div`
+  display: flex;
+  position: relative;
+  height: 100%;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+`;
+
+const TextContainer = styled.div`
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  p {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding: 12px;
+    margin: 26px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
 `;
