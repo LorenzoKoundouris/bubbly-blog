@@ -104,6 +104,7 @@ const HeroImage = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: 0 35%;
 `;
 
 const TextBlock = styled.div`
@@ -139,8 +140,8 @@ const ButtonContainer = styled.div`
 `;
 
 const LatestPosts = styled.section`
-  margin: 20px 0 8px 8px;
-  background-color: ${props => props.theme.backgroundColour};
+  padding: 20px 8px;
+  background: linear-gradient(to top, #e3ddd9 0%, #fff 30%);
 `;
 
 const ArticleGrid = styled.div`
