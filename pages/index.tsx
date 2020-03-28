@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Title from "../components/Title";
+import LinkItem from "../components/LinkItem";
 
 interface IProps {}
 
@@ -40,15 +41,18 @@ class Index extends React.Component<IProps> {
           <h2>Latest Posts</h2>
 
           <ArticleGrid>
-            <Article>
-              <img src="static/img/maria.jpg" />
-              <TextContainer>
-                <p>
-                  HEAD IN THE CLOUDS AT SKY GARDEN
-                  <span>12 Jan 20</span>
-                </p>
-              </TextContainer>
-            </Article>
+            <LinkItem href="/post/123" as="/post/head-in-the-clouds">
+              <Article>
+                <img src="static/img/maria.jpg" />
+                <TextContainer>
+                  <p>
+                    HEAD IN THE CLOUDS AT SKY GARDEN
+                    <span>12 Jan 20</span>
+                  </p>
+                </TextContainer>
+              </Article>
+            </LinkItem>
+
             <Article>
               <img src="static/img/sofa.jpg" />
               <TextContainer>

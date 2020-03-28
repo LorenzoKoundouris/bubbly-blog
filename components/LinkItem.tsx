@@ -1,15 +1,14 @@
 // libs
 import styled from "styled-components";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 
-interface ILinkProps {
-  href: string;
+interface ILinkProps extends LinkProps {
   children: string | JSX.Element;
 }
 
-function LinkItem({ children, href }: ILinkProps) {
+function LinkItem({ children, ...other }: ILinkProps) {
   return (
-    <Link href={href}>
+    <Link {...other}>
       <StyledAnchorTag>{children}</StyledAnchorTag>
     </Link>
   );
