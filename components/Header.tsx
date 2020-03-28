@@ -35,7 +35,7 @@ const MobileView = styled.div`
   flex-grow: 1;
   padding: 8px;
 
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 720px) {
     display: none;
   }
 `;
@@ -43,7 +43,7 @@ const MobileView = styled.div`
 const DesktopView = styled.div`
   display: none;
 
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 720px) {
     display: flex;
 
     & > * {

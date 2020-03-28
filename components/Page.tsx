@@ -6,12 +6,12 @@ import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import Header from "./Header";
 
 const theme = {
-  primaryColour: "#d5ccc6",
-  secondaryColour: "#d8aea1",
-  tertiaryColour: "#2b8f8c",
+  primaryColour: "#d5ccc6", // beige
+  secondaryColour: "#d8aea1", // pinky
+  tertiaryColour: "#2b8f8c", // teal
   backgroundColour: "#fff",
   fontColour: "#000",
-  highlightColour: "#29563a"
+  highlightColour: "#29563a" // forest green
 };
 
 class Page extends React.Component {
